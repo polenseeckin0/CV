@@ -1,0 +1,153 @@
+/* Genel Ayarlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Yatay Kaydırma Konteynırı */
+#wrapper {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 100vh;
+    scroll-snap-type: x mandatory;
+}
+
+/* Bölüm (Panel) Ayarları */
+.panel {
+    min-width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    scroll-snap-align: start;
+    position: relative;
+}
+
+/* Renk Temaları */
+.color0 { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; }
+.color1 { background: #ffffff; }
+.color2 { background: #f9f9f9; border-left: 5px solid #2a5298; }
+.color4-alt { background: #2c3e50; color: white; }
+
+/* İçerik Düzeni */
+.content {
+    max-width: 800px;
+    z-index: 2;
+}
+
+h1.major {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2.major {
+    font-size: 2.5rem;
+    color: #2a5298;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #2a5298;
+    display: inline-block;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Yetenekler İkon Dizilimi */
+.grid-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    list-style: none;
+    margin-top: 30px;
+}
+
+.grid-icons li {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.grid-icons li:hover {
+    transform: translateY(-10px);
+}
+
+.grid-icons .icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 10px;
+    color: #2a5298;
+}
+
+/* İletişim Formu */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.button.primary {
+    background-color: #2a5298;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Resim Alanı */
+.image.filtered img {
+    width: 350px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+    margin-left: 50px;
+}
+
+/* Kaydırma Çubuğu Güzelleştirme */
+#wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+#wrapper::-webkit-scrollbar-thumb {
+    background: #2a5298;
+    border-radius: 10px;
+}
+/* Profil Fotoğrafı Ayarları */
+.profile-pic {
+    width: 180px;         /* Genişlik */
+    height: 180px;        /* Yükseklik */
+    object-fit: cover;    /* Fotoğrafın ezilmesini önler */
+    border-radius: 50%;   /* Yuvarlak yapar (Kare istersen bu satırı sil) */
+    border: 4px solid #58a6ff; /* Çerçeve rengi */
+    margin-bottom: 20px;  /* Altındaki yazı ile mesafe */
+    box-shadow: 0 0 20px rgba(0,0,0,0.3); /* Hafif gölge */
+}
+
+/* İçeriği dikeyde hizalamak için */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
